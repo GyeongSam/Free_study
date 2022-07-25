@@ -1,0 +1,1 @@
+print('aas dfdsfsaaa'.split())
