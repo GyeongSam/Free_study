@@ -14,7 +14,11 @@ class Calculator:
         return self.num1 * self.num2
 
     def divide(self):
-        return self.num1 / self.num2 if self.num2!=0 else '0으로 나눌 수 없습니다.'
+        try:
+            return self.num1 / self.num2
+        except:
+            return '0으로 나눌 수 없습니다.'
+
 
 add_test=Calculator(1,2)
 sub_test=Calculator(2,1)
