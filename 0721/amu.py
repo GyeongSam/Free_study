@@ -5,7 +5,5 @@ def standard_deviation(values):
     std_dev = math.sqrt(sum_var)
     return std_dev
 
-
-
 print(standard_deviation([1,2,3,4,5]))
         

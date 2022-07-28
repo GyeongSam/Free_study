@@ -13,4 +13,4 @@ while True:
     words_list.append(new_words)
 
 if new_words!='done':
-    print(f'{len(words_list)+1}번째 사람이 졌습니다!')
+    print(f'{len(words_list)+1}번째 사람이 탈락했습니다!')

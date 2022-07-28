@@ -10,7 +10,7 @@ while True:
     else:
         count+=1
         if count==3:
-            print('입력 횟수가 초과되어 종료합니다.')
+            print('틀렸습니다. 입력 횟수가 초과되어 종료합니다.')
             break
         print(f'틀렸습니다. 남은 입력 횟수는 {3-count}회 입니다.')
         

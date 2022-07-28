@@ -10,4 +10,4 @@ words_dict = {'proper' : '적절한',
 'responsible' : '책임감 있는',
 'regular' : '규칙적인'}
 
-print(words_dict.items()[0])
+print(words_dict.items())

@@ -1,6 +1,3 @@
-from this import d
-
-
 words_dict = {'proper' : '적절한',
 'possible' : '가능한',
 'moral' : '도덕적인',

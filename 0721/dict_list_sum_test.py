@@ -5,3 +5,4 @@ def dict_list_sum(x):
     return sum
 
 print(dict_list_sum([{'name':'kim','age':12},{'name':'lee','age':4}]))
+

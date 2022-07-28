@@ -12,5 +12,5 @@ def get_strong_number(x,y):
     else:
         return x,y
     
-print(get_strong_number('delilah','delilah'))
+print(get_strong_number('delilah','dixon'))
 
