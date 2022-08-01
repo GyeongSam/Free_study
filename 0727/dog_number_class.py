@@ -19,8 +19,3 @@ class Doggy:
         print(f'현재 마리수 : {Doggy.num_of_dogs}')
 
 
-Dog1=Doggy('dog1','포메라니안')
-Dog2=Doggy('dog2','진돗개')
-del Dog1
-Doggy.get_status()
-Dog2.bark()
