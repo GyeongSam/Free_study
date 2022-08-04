@@ -1,0 +1,58 @@
+/* 주어진 코드는 수정하지 않습니다. */
+body {
+  font-family: Arial;
+  width: 800px;
+}
+
+section {
+  float: left;
+  margin-left: 4px;
+}
+
+aside { 
+  float: right;
+  margin-right: 4px;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.margin_rl {
+  margin-left: 4px;
+  margin-right: 4px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+.BC_white {
+  background-color:white
+}
+
+.BC_lg {
+  background-color: lightgray;
+}
+
+.margin_4px {
+  margin:4px;
+}
+.padding_4px {
+  padding:4px;
+}
+.text_center {
+  text-align: center;
+}
+.W490H300 {
+  width: 494px;
+  height: 300px;
+}
+
+.W280H300 {
+  width: 292px;
+  height: 300px;
+}
+.makeborder {
+  border: 1px solid black;
+  border-radius: 4px;
+}

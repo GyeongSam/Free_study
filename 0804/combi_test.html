@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* div p {
+            color:blue;
+        } */
+        div > p {
+            color:crimson;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>자손 결합자 테스트 p</p>
+        <span>자손 결합자 테스트 span</span>
+        <span>
+            <p>자손 결합자 테스트 p in span</p>
+            <!-- 이 곳의 p태그가 자식 결합자의 경우엔 색깔 지정이 안되지만
+            자손결합자의 색깔 지정이 된다.
+            이걸 토대로 보면, 자손 결합자는 div밑에있는 모든 p에 대해
+            해당되지만, 자식 결합자는 div 바로 밑에있는 p만 해당된다.-->
+        </span>
+
+
+</body>
+</html>
