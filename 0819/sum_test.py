@@ -1,0 +1,1 @@
+for T in range(1,int(input())+1):print(''.join(list(map(''.join, zip(*[input()+' '*15 for _ in '_'*5])))).replace(' ',''))
