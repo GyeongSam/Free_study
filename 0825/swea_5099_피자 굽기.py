@@ -7,12 +7,11 @@ for T in range(1,int(input())+1):
 
     while len(Q)>1:
         P[Q[0]]=P[Q[0]]//2
-        if P[Q[0]]!=0:
-            Q.append(Q.pop(0))
+        if P[Q[0]]!=0:Q.append(Q.pop(0))
         else:
             Q.pop(0)
             if Pi:Q.append(Pi.pop(0))
-        print(Q,P)
+    print(f'{T}',*Q)
 
 
     # while True:

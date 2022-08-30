@@ -4,7 +4,7 @@ def GO(I,n,F,cnt):
     sub=[]
     d=0
     for _ in range(n):
-        while I-d>=1 or I+d<=N:
+        while True:
             if 0<I-d<=N and F[I-d]==0:d=-d;break
             if 0<I+d<=N and F[I+d]==0:d;break
             d+=1

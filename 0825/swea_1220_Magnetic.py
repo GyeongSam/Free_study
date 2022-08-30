@@ -4,8 +4,8 @@ for T in range(1,11):
     L=[list(map(int,input().split())) for _ in R]
     #1아래로 2위로
     cnt=0
-    sub=0
     for j in R:
+        sub=0
         for i in R:
             l=L[i][j]
             if l==1:sub=1

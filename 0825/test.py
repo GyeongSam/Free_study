@@ -19,5 +19,3 @@ def take(L,i,n,cnt=0):
         return [L,sub],cnt
     return [L],cnt
 
-N=9
-print(take([1,0,0,0,0,0,0,0,3,0],3,4))

@@ -15,12 +15,15 @@ for T in range(1,int(input())+1):
     Q=[S]   #방문할 큐
     V={S}   #방문한 곳
     cnt=0   #이동 간선수
-    while True:
+    g=1
+    while Q:
         Q=go(Q) #이동
         V.update(Q) #방문한 곳 갱신
         cnt+=1
-        if G in Q:break #도착했다면 종료
+        if G in Q:g=0;break #도착했다면 종료
+    if g:cnt=0
     print(f'#{T}',cnt)
+
 
 
 

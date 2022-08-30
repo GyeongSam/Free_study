@@ -30,14 +30,11 @@ for T in range(1,int(input())+1):
         I2,N2=L[c[1]][0],L[c[1]][1]
         I3,N3=L[c[2]][0],L[c[2]][1]
         out1s=take(F[:],I1,N1)
-        print('out1s:',out1s)
         for out1 in out1s[0]:
             out2s=take(out1[:],I2,N2,out1s[1])
-            print('out2s:',out2s)
             for out2 in out2s[0]:
                 out3s=take(out2[:],I3,N3,out2s[1])
                 if out3s[1]<s:s=out3s[1]
-                print('out3s:',out3s)
     print(f'#{T}',s)
     
 
