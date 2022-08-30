@@ -29,7 +29,6 @@ for T in range(1,int(input())+1):
                 break
             else:
                 Ls=SUB_L
-                print(len(Ls))
                 continue
             break
     else:G=0

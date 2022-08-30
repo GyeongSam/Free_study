@@ -8,4 +8,4 @@ for _ in '_'*10:
             L.append(sub)
         else:continue
         break
-    print(*L)
+    print(f'#{T}',*L)
