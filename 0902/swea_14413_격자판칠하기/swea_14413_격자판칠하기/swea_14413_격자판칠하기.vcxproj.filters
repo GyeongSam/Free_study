@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="swea_14413_격자판칠하기.cpp">
+    <ClCompile Include="swea_14413_수정1.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

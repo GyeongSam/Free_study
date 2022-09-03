@@ -9,15 +9,15 @@ int main() {
 	int T;
 	std::cin >> T;
 	for (int t = 1; t <= T; t++) {
-		char L[55][55];
+		char L[51][51];
 		int N, M;
 		std::cin >> N >> M;
 		for (int i = 0; i < N; i++) {
-			char *sub = new char;
+			char sub[51];
 			std::cin >> sub;
-			std::cout << sub;
 			for (int j = 0; j < M; j++) {
 				L[i][j] = sub[j];
+
 			}
 		}
 		int can1 = 1, can2 = 1;
