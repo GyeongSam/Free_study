@@ -9,13 +9,11 @@ int M=-1e10, m=1e10;
 
 void BT(int c) {
 	if (c == N) {
-		if (num[c] > M)M = num[c];
-		if (num[c] < m)m = num[c];
-		return;
+		if (num[c-1] > M)M = num[c-1];
+		if (num[c-1] < m)m = num[c-1];
 	}
 	for (int a = 0; a < 4; a++) {
 
-		cout << "여긴거 같은데?\n";
 		if (op[a]) {
 			op[a]--;
 			int sub = num[c];
@@ -29,7 +27,6 @@ void BT(int c) {
 		}
 	}
 }
-
 int main() {
 	ios::sync_with_stdio(0);
 	cin.tie(0);
@@ -38,9 +35,9 @@ int main() {
 	for (int i = 0; i < N; i++) {
 		cin >> num[i];
 	}
-	for (int j = 0; j < 4;) {
+	for (int j = 0; j < 4; j++) {
 		cin >> op[j];
 	}
 	BT(1);
-	cout << M <<"\n"<<N;
+	cout << M <<"\n"<<m;
 }
