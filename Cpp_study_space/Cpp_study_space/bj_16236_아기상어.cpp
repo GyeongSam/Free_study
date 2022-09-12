@@ -26,30 +26,30 @@ IJ find_fish(IJ ij) {
 	ij.I = -1;
 	return ij;
 }
-//
-//
-//int main() {
-//	IJ location,next_location;
-//	cin >> N;
-//	for (int i = 0; i < N; i++) {
-//		for (int j = 0; j < N; j++) {
-//			cin >> sea[i][j];
-//			if (sea[i][j] == 9) { location.I = i; location.J = j; }
-//		}
-//	}
-//	while (1) {
-//		next_location = find_fish(location);
-//		if (next_location.I == -1) { break; }
-//		time += abs(location.I - next_location.I) + abs(location.J - next_location.J);
-//		location = next_location;
-//		sea[location.I][location.J] = 0;
-//		if (++cnt == sz) {
-//			sz++;
-//			cnt = 0;
-//		}
-//	}
-//
-//	cout << time << "\n";
-//
-//
-//}
+
+
+int main() {
+	IJ location,next_location;
+	cin >> N;
+	for (int i = 0; i < N; i++) {
+		for (int j = 0; j < N; j++) {
+			cin >> sea[i][j];
+			if (sea[i][j] == 9) { location.I = i; location.J = j; }
+		}
+	}
+	while (1) {
+		next_location = find_fish(location);
+		if (next_location.I == -1) { break; }
+		time += abs(location.I - next_location.I) + abs(location.J - next_location.J);
+		location = next_location;
+		sea[location.I][location.J] = 0;
+		if (++cnt == sz) {
+			sz++;
+			cnt = 0;
+		}
+	}
+
+	cout << time << "\n";
+
+
+}

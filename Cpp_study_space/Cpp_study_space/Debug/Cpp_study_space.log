@@ -1,4 +1,5 @@
-﻿  bj_16236_아기상어.cpp
-  bj_2738_행렬덧셈.cpp
-  코드를 생성하고 있습니다...
+﻿  bj_16236_아기상어_.cpp
+c:\users\sanghyun_an\desktop\ssafy\ssfay8\3.공부\free_study\cpp_study_space\cpp_study_space\bj_16236_아기상어_.cpp(24): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\sanghyun_an\desktop\ssafy\ssfay8\3.공부\free_study\cpp_study_space\cpp_study_space\bj_16236_아기상어_.cpp(31): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\sanghyun_an\desktop\ssafy\ssfay8\3.공부\free_study\cpp_study_space\cpp_study_space\bj_16236_아기상어_.cpp(49): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
   Cpp_study_space.vcxproj -> C:\Users\sanghyun_An\Desktop\SSAFY\ssfay8\3.공부\Free_study\Cpp_study_space\Debug\Cpp_study_space.exe
