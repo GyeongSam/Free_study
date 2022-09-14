@@ -18,6 +18,10 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="bj_14502_연구소.cpp" />
+    <ClCompile Include="bj_1005_ACM craft.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{6D459448-05D4-4F09-A826-C407BBDECF47}</ProjectGuid>
