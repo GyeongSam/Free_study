@@ -62,7 +62,7 @@ int main() {
 			scanf("%d", &info[n][t]);
 		}
 	}
-	int use = 1 << 4;
+	int use = 1;
 	int comb[9];
 	comb[3] = 1;
 	DFS(0, N, &ans, comb, use, info);
