@@ -1,3 +1,4 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 
 int dfs(int D, int L, int A, int(*dp)[3][4], int& N) {
@@ -11,7 +12,7 @@ int dfs(int D, int L, int A, int(*dp)[3][4], int& N) {
 	if (ret != -1) {
 		return ret;
 	}
-	ret= dfs(D + 1, L, 0, dp, N) + dfs(D + 1, L + 1, 0, dp, N) + dfs(D + 1, L, A + 1, dp, N);
+	ret= (dfs(D + 1, L, 0, dp, N) + dfs(D + 1, L + 1, 0, dp, N) + dfs(D + 1, L, A + 1, dp, N))%1000000;
 	return ret;
 }
 
