@@ -8,11 +8,9 @@ def dfs(i,j,v,h,k,cnt):
     if cnt>ans:ans=cnt
     for d in R4:
         ni,nj=i+di[d],j+dj[d]
-        if not (ni<0 or ni>=N or nj<0 or nj>=N):print(f'ni:{ni},nj:{nj},v?:{v&1<<(N*ni+nj)}')
         if ni<0 or ni>=N or nj<0 or nj>=N or (v&1<<(N*ni+nj)):continue
-        if h>height[ni][nj]:
-            dfs(ni,nj,v|(1<<(N*i+j)),height[ni][nj],k,cnt+1)
-        if not k:
+        if h>height[ni][nj]:dfs(ni,nj,v|(1<<(N*i+j)),height[ni][nj],k,cnt+1)
+        elif not k:
             for dk in RK:
                 if h>height[ni][nj]-dk:
                     dfs(ni,nj,v|(1<<(N*i+j)),height[ni][nj]-dk,dk,cnt+1) 
