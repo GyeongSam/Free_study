@@ -23,6 +23,12 @@ void go() {
 		while (1) {
 			int ni = i + di[sea[i][j].d], nj = j + dj[sea[i][j].d];
 			if (ni >= 0 && ni < 4 && nj >= 0 && nj < 4 && sea[ni][nj].n) {
+				if (sea[ni][nj].n == -1) {
+					sq[x] = { ni,nj };
+					sea[ni][nj] = sea[i][j];
+					sea[i][j] = { -1,-1 };
+					break;
+				}
 				AX temp = sq[sea[i][j].n];
 				sq[sea[i][j].n] = sq[sea[ni][nj].n];
 				sq[sea[ni][nj].n] = temp;
@@ -38,14 +44,7 @@ void go() {
 
 
 void dfs(int sum) {
-	
-	printf("sum:%d\n", sum);
-	F(i, 4) { F(j, 4) printf("(%d,%d) ", sea[i][j].n, sea[i][j].d); printf("\n"); }
-	F(i,17) printf("fish%d:(%d,%d)\n", i, sq[i].i, sq[i].j);
-
-
 	if (sum > MAX) MAX = sum;
-	
 	AX sq_save[17];
 	fish sea_save[4][4];
 	F(i, 17) sq_save[i] = sq[i];
@@ -61,11 +60,6 @@ void dfs(int sum) {
 			sq[saved_fish.n] = { -1,-1 };
 			sea[ni][nj].n = 0;
 			sea[i][j] = { -1,-1 };
-
-
-			printf("chocie:%d\n", c);
-
-
 			dfs(sum + saved_fish.n);
 			sea[i][j] = saved_shark;
 			sea[ni][nj] = saved_fish;
@@ -90,10 +84,6 @@ int main() {
 	int v= sea[0][0].n;
 	sq[sea[0][0].n] = { -1,-1 };
 	sea[0][0].n = 0;
-
-	//F(i, 4) { F(j, 4) printf("(%d,%d) ", sea[i][j].n, sea[i][j].d); printf("\n"); }
-	//F(i,17) printf("fish%d:(%d,%d)\n", i, sq[i].i, sq[i].j);
-
 	dfs(v);
 	printf("%d", MAX);
 }
