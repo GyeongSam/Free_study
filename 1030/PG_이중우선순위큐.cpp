@@ -10,7 +10,7 @@ void swap(int *a,int*b) {
     *a = temp;
 }
 
-void maxheappush(vector<int>& maxheap, vector<int>& minheap, vector<int>& mtom, int ip) {
+void heappush(vector<int>& maxheap, vector<int>& minheap, vector<int>& maxtomin, vector<int>& mintomax, int ip) {
     int idx = maxheap.size();
     maxheap.push_back(ip);
     while (idx > 1 && maxheap[idx / 2] < maxheap[idx]) {
