@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>회문 검4</h1>
+      <input type="text" v-model="userInput" />
+      <button v-on:click="checkInput">확인하삼</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.13/dist/vue.min.js"></script>
+    <script>
+      const app = new Vue({
+        el: "#app",
+        data: {
+          userInput: "",
+        },
+        methods: {
+          palindrome() {
+            const reversed = this.userInput.split("").reverse().join("");
+            if (reversed === this.userInput) {
+              return true;
+            } else {
+              return false;
+            }
+          },
+          checkInput() {
+            if (this.userInput === "") {
+              alert("입력값이 없삼.");
+            } else {
+              if (this.palindrome()) {
+                alert("회문이삼!");
+              } else {
+                alert("회문아니삼!");
+              }
+            }
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
