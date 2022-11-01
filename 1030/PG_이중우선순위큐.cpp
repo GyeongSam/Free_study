@@ -10,7 +10,11 @@ void swap(int *a,int*b) {
     *a = temp;
 }
 
+<<<<<<< HEAD
+void heappush(vector<int>& maxheap, vector<int>& minheap, vector<int>& maxtomin, vector<int>& mintomax, int ip) {
+=======
 void heappush(vector<int>& maxheap, vector<int>& minheap, vector<int>& maxidx, vector<int>& minidx, int ip) {
+>>>>>>> d39f7269c260e83210930a3cefc41f61b2cff281
     int idx = maxheap.size();
     maxheap.push_back(ip);
 	maxidx.push_back(idx);
