@@ -2,31 +2,59 @@
 #include <iostream>
 
 
-int N, M, K;
-int ip[1000000];
-int st[2222222] = { 0, };
+long long N, M, K;
+long long ip[1000000];
+long long st[3000000] = { 0, };
 
 
-int makesgt(int n,int l,int r) {
-
-	printf("%d %d %d\n", n, l, r);
-
+long long makesgt(long long n, long long l, long long r) {
 	if (l == r) {
 		st[n] = ip[l];
 		return ip[l];
 	}
-	int m = (l + r)/2;
+	long long m = (l + r)/2;
 	st[n] = makesgt(2 * n, l, m) + makesgt(2 * n + 1, m+1, r);
 	return st[n];
 }
 
 
+void editsgt(long long n, long long l, long long r, long long idx, long long dn) {
+	if (l <= idx && r >= idx) {
+		st[n] += dn;
+		if (l == r) return;
+		long long m = (l + r) / 2;
+		editsgt(2 * n, l, m, idx, dn);
+		editsgt(2 * n + 1, m+1, r, idx, dn);
+	}
+}
+
+long long sumsgt(long long n, long long l, long long r, long long l_, long long r_) {
+	if (l_ <= l && r <= r_) return st[n];
+	if (r < l_ || r_ < l) return 0;
+	long long m = (r + l) / 2;
+	return sumsgt(2 * n, l, m, l_, r_) + sumsgt(2 * n + 1, m + 1, r, l_, r_);
+}
 
 
 int main() {
 	scanf("%d %d %d", &N, &M, &K);
-	for (int n = 0; n < N; ++n) scanf("%d", &ip[n]);
-	makesgt(1, 0, 5);
-	for (int i = 1; i < N*N; ++i) printf("%d ", st[i]);
+	for (int n = 0; n < N; ++n) scanf("%lld", &ip[n]);
+	long long c, l, r;
+
+	makesgt(1, 0, N - 1);
+
+	for (int q = 0; q < M + K; ++q) {
+		scanf("%lld %lld %lld", &c, &l, &r);
+		if (c == 1) {
+			editsgt(1, 0, N - 1, l - 1, r - ip[l - 1]);
+			ip[l - 1] = r;
+		}
+		else if (c == 2) {
+			printf("%lld\n",sumsgt(1, 0, N - 1, l - 1, r - 1));
+		}
+	}
 
 }
+
+
+
