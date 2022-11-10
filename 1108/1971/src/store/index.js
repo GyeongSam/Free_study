@@ -5,14 +5,16 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    counter:0,
+    counter:0
   },
   mutations: {
-
+    CNT_CHANGE(state,d){
+      state.counter+=d;
+    }
   },
   actions: {
-    buttonClick(context){
-      context
+    change_cnt(context,d){
+      context.commit('CNT_CHANGE',d)
     }
   },
   modules: {

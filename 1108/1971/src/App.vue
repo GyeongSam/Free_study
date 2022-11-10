@@ -2,7 +2,7 @@
 
 <template>
   <div id="app">
-    <p>Counter: {{ counter }}</p>
+    <p>Counter: {{ $store.state.counter }}</p>
     <p>Counter x2: {{ counterDouble }}</p>
     <p></p>
     <button @click="increase">increase +</button>
@@ -20,18 +20,15 @@ export default {
   },
   methods: {
     increase(){
-      this.$store.dispatch('increase',this)
+      this.$store.dispatch('change_cnt',1)
+    },
+    decrease(){
+      this.$store.dispatch('change_cnt',-1)
     }
-    // increase: function () {
-    //   this.counter += 1
-    // },
-    // decrease: function () {
-    //   this.counter -= 1
-    // },
   },
   computed: {
     counterDouble: function () {
-      return this.counter * 2
+      return this.$store.state.counter * 2
     },
   },
 }
