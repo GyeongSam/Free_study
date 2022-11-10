@@ -1,26 +1,29 @@
 <template>
-  <div class="size-list-item">
-    <div class="size-item">
-      <span>{{sizeName.name}}</span>
-      <span>{{sizeName.price}}</span>
-    </div>
-  </div>
+    <div v-bind:class="sizeListItemClassSet" v-on:click="selectSize">
+    <span>{{sizeName.name}}</span>
+    <span>{{sizeName.price}}</span>
+
+</div>
 </template>
 
 <script>
 
 
 export default {
-  name: 'MenuListItem',
-  props: ["sizeName"],
+  name: 'SizeListItem',
+  props: ["sizeName","sizeListItemClassSet"],
+  methods:{
+    selectSize(){
+      this.$emit("selectSize",this.sizeName.name)
+    },
+  },
+  
 }
 
 
 </script>
 <style scoped>
-/* .menu-img, .menu-title, .menu-price{
-  border: 1px solid black;
-} */
+
 .size-item{
   display:flex;
   justify-content: space-between;
@@ -35,5 +38,7 @@ export default {
 .size-item:hover{
   background-color: seagreen;
 }
-
+.selected {
+  background-color: green;
+}
 </style>
